@@ -1,9 +1,9 @@
-import { Suspense, lazy } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Suspense, lazy } from "react";
+import "./App.css";
+import reactLogo from "./assets/react.svg";
 
 // Works also with SSR as expected
-const Card = lazy(() => import('./Card'))
+const Card = lazy(() => import("./Card"));
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className="text-blue-500">Vite + React</h1>
 
       <Suspense fallback={<p>Loading card component...</p>}>
         <Card />
@@ -26,7 +26,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
