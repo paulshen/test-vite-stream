@@ -32,7 +32,8 @@ if (!isProduction) {
 } else {
   const compression = (await import('compression')).default
   const sirv = (await import('sirv')).default
-  app.use(compression())
+  // With this on, I don't get partial stream rendering
+  // app.use(compression())
   app.use(base, sirv('./dist/client', { extensions: [] }))
 }
 
