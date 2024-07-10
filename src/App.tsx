@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
+import { Link } from "react-router-dom";
 
 // Works also with SSR as expected
 const Card = lazy(() => import("./Card"));
 
-function App() {
+function App({ user }) {
   return (
     <>
       <div>
@@ -17,6 +18,7 @@ function App() {
         </a>
       </div>
       <h1 className="text-blue-500">Vite + React</h1>
+      <div>{user.name}</div>
 
       <Suspense fallback={<p>Loading card component...</p>}>
         <Card />
@@ -25,6 +27,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <Link to="/a">Go to A</Link>
+        <Link to="/b">Go to B</Link>
+      </div>
     </>
   );
 }

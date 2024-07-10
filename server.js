@@ -56,7 +56,7 @@ app.use('*', async (req, res) => {
 
     let didError = false
 
-    const { pipe, abort } = render(url, ssrManifest, {
+    const { pipe, abort } = await render(req, ssrManifest, {
       onShellError() {
         res.status(500)
         res.set({ 'Content-Type': 'text/html' })

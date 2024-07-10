@@ -2,8 +2,7 @@ import { Suspense, use, useState } from "react";
 
 function TestUse() {
   const [sleepPromise] = useState(
-    () =>
-      new Promise((resolve) => setTimeout(() => resolve(Math.random()), 2000))
+    () => new Promise((resolve) => setTimeout(() => resolve("loaded!"), 2000))
   );
 
   const value = use(sleepPromise);
