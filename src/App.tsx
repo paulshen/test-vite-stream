@@ -18,7 +18,7 @@ function App({ user }) {
         </a>
       </div>
       <h1 className="text-blue-500">Vite + React</h1>
-      <div>{user.name}</div>
+      <div>{JSON.stringify(user)}</div>
 
       <Suspense fallback={<p>Loading card component...</p>}>
         <Card />
@@ -28,8 +28,7 @@ function App({ user }) {
         Click on the Vite and React logos to learn more
       </p>
       <div>
-        <Link to="/a">Go to A</Link>
-        <Link to="/b">Go to B</Link>
+        <Link to="/a">Go to A</Link> <Link to="/b">Go to B</Link>
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { Suspense, use, useState } from "react";
 
 function TestUse() {
   const [sleepPromise] = useState(
-    () => new Promise((resolve) => setTimeout(() => resolve("loaded!"), 2000))
+    () => new Promise((resolve) => setTimeout(() => resolve("loaded!"), 1000))
   );
 
   const value = use(sleepPromise);
@@ -17,9 +17,9 @@ function Card() {
       <button onClick={() => setCount((count) => count + 1)}>
         count is {count}
       </button>
-      <Suspense fallback={<p>Loading...</p>}>
+      {/* <Suspense fallback={<p>Loading...</p>}>
         <TestUse />
-      </Suspense>
+      </Suspense> */}
       <p>
         Edit <code>src/App.tsx</code> and save to test HMR
       </p>

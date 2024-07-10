@@ -4,7 +4,7 @@ export function A({ user }) {
   return (
     <div>
       <div>Page A</div>
-      <div>{user.name}</div>
+      <div>{JSON.stringify(user)}</div>
       <Link to="/">Go to /</Link>
     </div>
   );

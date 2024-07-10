@@ -25,6 +25,7 @@ const routes = [
     },
     Component() {
       let user = useLoaderData();
+      cache = user;
       return <App user={user} />;
     },
   },
@@ -36,6 +37,7 @@ const routes = [
     },
     Component() {
       let user = useLoaderData();
+      cache = user;
       return <A user={user} />;
     },
   },
@@ -47,6 +49,7 @@ const routes = [
     },
     Component() {
       let user = useLoaderData();
+      cache = user;
       return <B user={user} />;
     },
   },
